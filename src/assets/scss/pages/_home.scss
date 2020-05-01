@@ -1,0 +1,8 @@
+.container {
+    font-size: 1.4rem;
+    background-color: $color-secondary;
+    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, mimax(min-content, 15px));
+    grid-template-rows: min-content 1fr min-content;
+}

@@ -1,0 +1,43 @@
+.header {
+
+    background-color: $color-primary;
+    padding: 2rem;
+
+    display: grid;
+    grid-template-columns: 1fr max-content;
+
+    &__icon--right {
+        margin-top: .2rem;
+    }
+
+    &__icon {
+        fill: $color-white;
+        width:  3rem;
+        height: 3rem;
+        margin-left: 1rem;
+        
+        
+        &--star {
+            fill: $color-tertiary;
+            width:  4rem;
+            height: 4rem;
+        }
+    }
+
+    &__notification {
+        font-size: .8rem;
+        height: 1.75rem;
+        width: 1.75rem;
+        border-radius: 50%;
+        background-color: $color-notification;
+        color: $color-white;
+        position: absolute;
+        top:1.5rem;
+        right:1.1rem;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+}
