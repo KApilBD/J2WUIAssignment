@@ -1,4 +1,5 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 import Star from "../assets/svg/Star";
 import MagnifyingGlass from "../assets/svg/MagnifyingGlass";
@@ -17,10 +18,12 @@ const Header = () => {
                 <MagnifyingGlass className="header__icon" />
             </div> */}
             <div className="header__icon--right">
-                
+
                 <MagnifyingGlass className="header__icon" />
-                <ShoppingCart className="header__icon" />
-                <span class="header__notification">13</span>
+                <NavLink to="/cart" exact  >
+                    <ShoppingCart className="header__icon" />
+                    <span class="header__notification">13</span>
+                </NavLink>
             </div>
         </header>
     );

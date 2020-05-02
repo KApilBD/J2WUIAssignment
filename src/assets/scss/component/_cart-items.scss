@@ -1,0 +1,117 @@
+.cart-dashboard {
+    display: grid;
+    grid-template-columns: 1fr 30vw;
+    grid-template-rows:repeat(auto-fill, mixmax(7rem, 1fr));
+    grid-gap: 1.5rem;
+
+}
+
+.cart-item {
+    margin: 1.5rem;
+    background-color: $color-white;
+    border: 1px #999 solid;
+    padding: 2rem 3rem;
+    
+    display: flex;
+
+    &__image {
+        width: 10rem;
+
+        object-fit: cover;
+    }
+
+    &__detail {
+        margin-left: 2rem;
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    &__price {
+
+        height: 60%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        &--original {
+            color: $color-grey-dark;
+            text-decoration: line-through;
+            margin-right: 5rem;
+            margin-left: .5rem;
+            font-size: 1rem;
+            line-height: 0;
+        }
+
+    }
+
+    &__remove{
+
+        flex: 1;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        &--btn {
+            text-transform: uppercase;
+            cursor: pointer;
+            background-color: transparent;
+            border: none;
+            border-radius: 0;
+            font-weight: 700;
+            font-size: 1.6rem;
+            
+        }
+    }
+
+    
+}
+
+.cartbox-price-details {
+    background-color: $color-white;
+    margin: 1.5rem;
+    align-content: start;
+    height: 30rem;
+    border: 1px #999 solid;
+    padding: 2rem 3rem;
+
+    display: grid;
+
+    &__heading {
+
+        margin : 2rem 0;
+        padding: 1rem 1.5rem ;
+        text-transform: uppercase;
+        border: 1px solid #999;
+
+    }
+
+    &__total {
+        margin : 2rem 0;
+        padding: 1rem 1.5rem ;
+        text-transform: uppercase;
+        border: 1px solid #999;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-content: center;
+        align-content: center;
+
+        p{
+            display: inline-block;
+            text-align: center;
+        }
+    }
+
+    .display-price {
+        display: flex;
+        flex-direction: column;
+
+        &__calculation{
+            margin-left: 4rem;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            justify-content: center;
+        }
+    }
+}

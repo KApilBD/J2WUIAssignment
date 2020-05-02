@@ -1,0 +1,25 @@
+.btn {
+    border: none;
+    cursor: pointer;
+    border-radius: 1.5rem;
+    padding: .5rem 1rem;
+    background-color: $color-primary;
+    color:$color-white;
+    font-weight: 400;
+    text-transform: uppercase;
+    transition:transform .1s;
+}
+
+.btn:active {
+    transform: translateY(.3rem);
+}
+
+.filter-btn {
+    padding: .65rem 3rem;
+}
+
+.item-btn {
+    background-color: $color-tertiary;
+    color: $color-grey-dark-3;
+}
+

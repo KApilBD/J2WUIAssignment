@@ -1,0 +1,22 @@
+.filter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem;
+
+    &__range {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+    }
+
+    &__range-label {
+        display: block;
+        line-height: 1.8;
+    }
+
+    &__range-selector {
+        width: 80% !important;
+        margin: 0 1.5rem
+    }
+}

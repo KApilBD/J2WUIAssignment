@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { NavLink } from "react-router-dom";
 
 import Header from "../component/Header";
 import Footer from "../component/Footer";
@@ -13,8 +12,8 @@ class AppLayout extends Component {
         return (
             <div className="container">
                 <Header />
-                
-                <Route childProps = {"demo"} />
+
+                <Route childProps={"demo"} />
 
                 <Footer />
             </div>
