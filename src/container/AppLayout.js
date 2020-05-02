@@ -1,24 +1,25 @@
-import React, { Component } from "react";
+import React, { useContext } from "react";
 
 import Header from "../component/Header";
 import Footer from "../component/Footer";
 
 import Route from "../Route";
 
+import {Context as ShoppingContext} from "../context/ShoppingContext";
 
-class AppLayout extends Component {
 
-    render() {
-        return (
-            <div className="container">
-                <Header />
 
-                <Route childProps={"demo"} />
+const AppLayout = () => {
+    const { state } = useContext(ShoppingContext);
+    return (
+        <div className="container">
+            <Header data = {state.cartItems} />
 
-                <Footer />
-            </div>
-        );
-    }
+            <Route childProps={"demo"} />
+
+            <Footer />
+        </div>
+    );
 }
 
 export default AppLayout;

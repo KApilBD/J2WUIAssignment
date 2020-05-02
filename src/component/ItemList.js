@@ -1,21 +1,15 @@
 import React from "react";
 
 import Item from "./Item";
-import CartItem from "./CartItem";
 
 
-const ItemList = ({ data, location }) => {
+const ItemList = ({ data,addItemToCart }) => {
 
     return (
-        <div className={location === "shop" ? "item-list" : "cart-list"}>
+        <div className="item-list">
             {
-                data.items.map((item) => {
-                    if(location === "shop"){
-                        return <Item item={item} key={item.name + item.discount + Math.floor(Math.random() * Math.floor(99))} />
-                    }
-                    if(location === "cart"){
-                        return <CartItem item={item} key={item.name + item.discount + Math.floor(Math.random() * Math.floor(99))} />
-                    }
+                data.map((item) => {
+                    return <Item item={item} addItemToCart={addItemToCart} key={item.name + item.discount + Math.floor(Math.random() * Math.floor(99))} />
                 })
             }
         </div>

@@ -3,9 +3,13 @@ import React from "react";
 import Button from "./Button";
 
 
-const Item = ({ item }) => {
+const Item = ({ item, addItemToCart }) => {
 
     const { name, image, price: { actual, display }, discount } = item;
+
+    const onAddItemToCart = () => {
+        addItemToCart(item);
+    }
 
     return (
         <div className="item" >
@@ -17,7 +21,7 @@ const Item = ({ item }) => {
                 <p className="item__price--offer">&#37;{discount} off</p>
             </div>
             <div className="item__btn">
-                <Button customBtn="item-btn" btnText="add to cart" />
+                <Button customBtn="item-btn" btnText="add to cart" onClickBtn ={ onAddItemToCart }/>
             </div>
         </div>
     );

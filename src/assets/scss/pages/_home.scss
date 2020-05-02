@@ -4,5 +4,11 @@
     
     display: grid;
     grid-template-columns: repeat(auto-fit, mimax(min-content, 15px));
-    grid-template-rows: min-content 1fr min-content;
+    grid-template-rows: min-content minmax(85vh, 1fr) min-content;
+}
+
+.error-message {
+    display: block;
+    margin: 0 auto;
+    color : $color-notification;
 }

@@ -3,8 +3,16 @@ import React from "react";
 import CartControl from "./CartControl";
 const data = require("../Data.json");
 
-const CartItem = ({ item }) => {
+const CartItem = ({ item, qty, onDeleteItem, onAddItem, onOneItemDelete }) => {
     const { name, image, price: { actual, display }, discount } = item;
+
+    const onAddItemHandler = () => {
+        onAddItem(item);
+    }
+
+    const onOneItemDeletefromCart = () => {
+        onOneItemDelete(name);
+    }
 
     return (
         <div className="cart-item" >
@@ -17,9 +25,9 @@ const CartItem = ({ item }) => {
                     <p className="item__price--offer">&#37;{discount} off</p>
                 </div>
             </div>
-            <CartControl />
+            <CartControl qty={qty} onOneItemDeletefromCart={onOneItemDeletefromCart} onAddItem={onAddItemHandler}/>
             <div className= "cart-item__remove">
-                <button className="cart-item__remove--btn">
+                <button className="cart-item__remove--btn" onClick={() => { onDeleteItem(name)}}>
                     Remove
                 </button>
             </div>

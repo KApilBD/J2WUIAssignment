@@ -7,14 +7,14 @@ const CartControl = (props) => (
 
         <button
             className="cart-control__subtract"
-            onClick={props.removed}
-            disabled={props.disable}>
+            onClick={() => { props.onOneItemDeletefromCart()}}
+            disabled={props.qty > 0 ? false : true}>
             -
         </button>
-        <input type="text" class="cart-control__input"   id="name"  />
+        <input type="text" class="cart-control__input" value={props.qty}  id="name"  />
         <button
             className="cart-control__add"
-            onClick={props.added}>
+            onClick={ () => { props.onAddItem()}}>
             +
         </button>    
     </div>

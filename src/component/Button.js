@@ -2,12 +2,14 @@ import React from "react";
 
 
 
-const Button = ({ customBtn, btnText }) => {
+const Button = ({ customBtn, btnText, onClickBtn }) => {
 
     return (
-            <button className={`btn ${customBtn}`} onClick={()=>{}} >
-                {btnText}
-            </button>
+        <button className={`btn ${customBtn}`} onClick={() => {
+            onClickBtn()
+        }} >
+            {btnText}
+        </button>
     )
 };
 

@@ -5,11 +5,13 @@ import Star from "../assets/svg/Star";
 import MagnifyingGlass from "../assets/svg/MagnifyingGlass";
 import ShoppingCart from "../assets/svg/ShoppingCart"
 
+const Header = ({ data }) => {
 
+    let qty = 0;
 
-
-
-const Header = () => {
+    data.map(i => {
+        qty = qty + i.quantity;
+    })
 
     return (
         <header className="header">
@@ -22,7 +24,8 @@ const Header = () => {
                 <MagnifyingGlass className="header__icon" />
                 <NavLink to="/cart" exact  >
                     <ShoppingCart className="header__icon" />
-                    <span class="header__notification">13</span>
+                    {qty > 0 &&
+                        <span className="header__notification">{qty}</span>}
                 </NavLink>
             </div>
         </header>
