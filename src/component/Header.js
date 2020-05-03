@@ -26,7 +26,7 @@ const Header = ({ data }) => {
 
     return (
         <header className="header">
-            <NavLink to="/" exact  >
+            <NavLink className="header__icon--star" to="/" exact  >
                 <Star className="header__icon--star" />
             </NavLink>
             {/* <div className="header__icon--right">
