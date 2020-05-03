@@ -26,7 +26,9 @@ const Header = ({ data }) => {
 
     return (
         <header className="header">
-            <Star className="header__icon--star" />
+            <NavLink to="/" exact  >
+                <Star className="header__icon--star" />
+            </NavLink>
             {/* <div className="header__icon--right">
                 <MagnifyingGlass className="header__icon" />
             </div> */}
