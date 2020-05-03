@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config=config/webpack/webpack-config.js --mode development"
+    "start": "webpack-dev-server --config=config/webpack/webpack-config.js --mode development",
+    "deploy": "gh-pages -d dist"
   },
   "repository": {
     "type": "git",
@@ -16,7 +17,7 @@
   "bugs": {
     "url": "https://github.com/KApilBD/J2WUIAssignment/issues"
   },
-  "homepage": "https://github.com/KApilBD/J2WUIAssignment#readme",
+  "homepage": "https://KApilBD.github.io/J2WUIAssignment",
   "babel": {
     "presets": [
       "@babel/preset-env",
@@ -40,6 +41,7 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.9.12",
+    "gh-pages": "^2.2.0",
     "node-sass": "^4.14.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
