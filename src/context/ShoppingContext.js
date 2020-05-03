@@ -83,14 +83,15 @@ const shoppingReducer = (state, action) => {
         case "search_Filter":
             const searchString = action.payload.toLowerCase();
             const updatedSeachedItems = state.products.items.filter(i => {
-                console.log( i.name.includes(searchString),  i.name, searchString)
+                console.log(i.name.includes(searchString), i.name, searchString)
                 const name = i.name.toLowerCase();
-                return name.includes(searchString); 
+                return name.includes(searchString);
             });
 
-        return {...state,
-            productsToshow:updatedSeachedItems
-        }
+            return {
+                ...state,
+                productsToshow: updatedSeachedItems
+            }
 
         default:
             return state;
