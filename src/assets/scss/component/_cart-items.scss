@@ -4,6 +4,10 @@
     grid-template-rows:repeat(auto-fill, mixmax(7rem, 1fr));
     grid-gap: 1.5rem;
 
+    @media only screen and (max-width: $bp-smallest){
+        grid-template-columns: 1fr;
+    }
+
 }
 
 .cart-item {
@@ -14,16 +18,34 @@
     
     display: flex;
 
+    @media only screen and (max-width: $bp-smallest){
+        flex-wrap: wrap;
+    }
+
     &__image {
         width: 10rem;
 
         object-fit: cover;
+        @media only screen and (max-width: $bp-smallest){
+            height: 30rem;
+            width: 15rem;
+        }
+    }
+
+    &__name{
+        @media only screen and (max-width: $bp-smallest){
+            margin-top: 3rem;
+        }
     }
 
     &__detail {
         margin-left: 2rem;
         display: flex;
         flex-direction: column;
+
+        @media only screen and (max-width: $bp-smallest){
+            align-items: center;
+        }
 
     }
 
@@ -33,6 +55,10 @@
         display: flex;
         justify-content: space-around;
         align-items: center;
+
+        @media only screen and (max-width: $bp-smallest){
+            justify-content: center;
+        }
 
         &--original {
             color: $color-grey-dark;

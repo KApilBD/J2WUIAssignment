@@ -5,6 +5,11 @@
     margin: 5px 0;
     margin-left: 15rem;
 
+    @media only screen and (max-width: $bp-smallest){
+        margin: 8px 0;
+        margin-left: 6rem;
+    }
+
     &__add,
     &__subtract {
         display: block;

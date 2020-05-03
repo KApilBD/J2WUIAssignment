@@ -5,6 +5,12 @@
     display: flex;
     align-items: center;
 
+    @media only screen and (max-width: $bp-smallest){
+       font-size: 1.2rem;
+       background-color: $color-grey-light-1;
+       padding: 1rem 1.5rem;
+    }
+
     h3 {
         font-weight: 400;
         margin-bottom: 0;

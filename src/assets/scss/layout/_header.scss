@@ -10,6 +10,30 @@
         margin-top: .2rem;
     }
 
+    &__search-input{
+        font-family: inherit;
+        font-size: inherit;
+        border: none;
+        color: $color-white;
+        border-radius: 0;
+        padding: .7rem 2rem;
+        width: 20rem;
+        background-color: $color-primary;
+        border-bottom: 1px solid #fff ;
+        position: relative;
+        bottom: 1.3rem;
+
+        &:focus {
+            outline: none;
+            border-bottom: 1px solid #fff ;
+        }
+
+        &::-webkit-input-placeholder {
+            font-weight: 300;
+            color: $color-grey-light-1;
+        }
+    }
+
     &__icon {
         fill: $color-white;
         width:  3rem;
@@ -38,6 +62,11 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+        @media only screen and (max-width: $bp-smallest){
+            top:1rem;
+            right:1rem;
+        }
         
     }
 }

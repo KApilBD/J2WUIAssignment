@@ -80,6 +80,18 @@ const shoppingReducer = (state, action) => {
                 cartItems: updatedCartItemsForOneDelete
             }
 
+        case "search_Filter":
+            const searchString = action.payload.toLowerCase();
+            const updatedSeachedItems = state.products.items.filter(i => {
+                console.log( i.name.includes(searchString),  i.name, searchString)
+                const name = i.name.toLowerCase();
+                return name.includes(searchString); 
+            });
+
+        return {...state,
+            productsToshow:updatedSeachedItems
+        }
+
         default:
             return state;
     }
@@ -106,6 +118,11 @@ const priceRangeChange = (dispatch) => {
         dispatch({ type: "priceRange_Change", payload: valArry });
     }
 }
+const searchFilter = (dispatch) => {
+    return (value) => {
+        dispatch({ type: "search_Filter", payload: value });
+    }
+}
 const sortByOption = (dispatch) => {
     return (sortVal) => {
         dispatch({ type: "sortBy_Option", payload: sortVal });
@@ -115,6 +132,6 @@ const sortByOption = (dispatch) => {
 
 export const { Context, Provider } = createDataContext(
     shoppingReducer,
-    { addItemToCart, priceRangeChange, sortByOption, deleteItemToCart, deleteItemOnefromCart },
+    { addItemToCart, priceRangeChange, sortByOption, deleteItemToCart, deleteItemOnefromCart, searchFilter },
     { ...initialState }
 );
